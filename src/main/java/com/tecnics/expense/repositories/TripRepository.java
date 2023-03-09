@@ -1,0 +1,17 @@
+package com.tecnics.expense.repositories;
+
+import java.util.List;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import com.tecnics.expense.models.TripModel;
+
+@Repository
+public interface TripRepository extends JpaRepository<TripModel, Long>{
+	
+		List<TripModel> findAll();
+	 
+		TripModel findByTripId(Long tripId);
+
+}
